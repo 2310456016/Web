@@ -1,0 +1,15 @@
+[
+  {"id": 1, "Name": "Apfel", "Tag": "Obst"},
+  {"id": 2, "Name": "Orange", "Tag": "Obst"},
+  {"id": 3, "Name": "Kirsche", "Tag": "Obst"},
+  {"id": 4, "Name": "Erdbeer", "Tag": "Obst"},
+  {"id": 5, "Name": "Gurke", "Tag": "Gemüse"},
+  {"id": 6, "Name": "Karotte", "Tag": "Gemüse"},
+  {"id": 7, "Name": "Mehl", "Tag": "Backware"},
+  {"id": 8, "Name": "Vanillezucker", "Tag": "Backware"},
+  {"id": 9, "Name": "Ahornsyrup", "Tag": "Backware"},
+  {"id": 10, "Name": "Salz", "Tag": "Backware"},
+  {"id": 11, "Name": "Backpulver", "Tag": "Backware"},
+  {"id": 12, "Name": "Natron", "Tag": "Backware"}
+]
+
