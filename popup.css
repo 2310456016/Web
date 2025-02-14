@@ -1,0 +1,75 @@
+body {
+    background-color: black !important;
+    color: white !important;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    text-align: center;
+}
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-color: black;
+    border: 3px solid white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+/* Teilnehmerliste im Popup */
+#participants-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+#participants-list label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+}
+
+#participants-list input {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+/* Bootstrap Cards */
+.card {
+    background-color: #1a1a1a !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+}
+
+.card-title {
+    color: #f8f9fa !important;
+}
+
+.card-text {
+    color: #ccc !important;
+}
