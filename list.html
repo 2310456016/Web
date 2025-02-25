@@ -10,38 +10,114 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="startpage.css">
-    <link rel="stylesheet" href="list.css">
     <link rel="stylesheet" href="popup.css">
 
-    <!--bootstrap-->
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!--bootstrap für die Verwendung von Cards (Listen)-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
 <body>
-<h1>Deine Einkaufslisten</h1>
-<button class="bcreate">Neue Liste erstellen</button>
 
-<!-- Hier erscheinen die neuen Listen -->
+<div id="containerHead">
+    <h1 id="heading1">Deine Einkaufslisten</h1>
+    <button class="home">Home</button>
+    <br>
+</div>
+
+
+<h3 id="toggleGrid">
+    Kurze Einleitung <span id="arrow">▼</span>
+</h3>
+<div class="gridcontainer hidden">
+    <div class="griditem1">
+        <p><italic>Listenansicht</italic><br>
+        In dieser Listenansicht kannst du den Namen der Liste sehen, die von dir hinzugefügten Teilnehmenden,
+        sowie die von dir hinzugefügten Produkte!</p>
+    </div>
+    <div class="griditem">
+        <p><italic>Ansehen</italic><br>
+        Bei Klick auf diesen Button öffnet sich ein Popup, indem du den Listennamen siehst, die Teilnehmenden und eine Art
+        Liste von den dir hinzugefügten Produkten, die du abhaken kannst, sobald du sie eingekauft hast!</p>
+    </div>
+    <div class="griditem">
+        <p><italic>Bearbeiten</italic><br>
+            Bei Klick auf diesen Button öffnet sich ein Popup! Dieses ist dasselbe wie bei der Listerstellung! Hier
+        kannst du deine Auswahl bearbeiten. Gleichzeitig ist das die Artikelansicht, wo du Artikel anlegen, bearbeiten
+        und löschen kannst. Auch neue Kategorien können erstellt werden oder gelöscht!</p>
+    </div>
+    <div class="griditem">
+        <p><italic>Löschen</italic><br>
+            Bei Klick auf diesen Button kannst du die angelegte Liste löschen, falls du diese Artikel doch nicht
+        kaufen willst!</p>
+    </div>
+    <div class="griditem">
+        <p><italic>Löschen</italic><br>Bei Klick auf diesen Button kannst du die angelegte Liste abschließen! Sie wandert unter die Überschrift
+        "Abgeschlossene Listen"! Wurden nicht alle Artikel abgehakt, wirst du nochmal gefragt ob du die Liste wirklich
+        schließen möchtest!</p>
+    </div>
+</div>
+<div>
+<button class="bcreate">Neue Liste erstellen</button>
+</div>
+
+<!--Suchfeld-->
+<div class="search-container">
+    <input type="text" id="search-bar" placeholder="Einkaufslisten durchsuchen..." class="form-control">
+    <button id="clear-search">X</button>
+</div>
+
 <div id="list-container" class="container mt-4">
-    <div class="row" id="list-row"></div> <!-- Hier erscheinen die Cards -->
+    <div class="row" id="list-row"></div>
 </div>
 
 
 <!-- Popup-Fenster -->
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close">&times;</span>
-        <h2>Neue Einkaufsliste</h2>
-        <input type="text" id="list-title" placeholder="Titel der Einkaufsliste">
-        <h3>Teilnehmer auswählen:</h3>
-        <div id="participants-list"></div>
-        <div id="products-list"></div>  <!-- Neu: Hier erscheinen die Produkte -->
-        <button id="confirm">Bestätigen</button>
-    </div>
+<div id="listDetailsPopup" class="popup">
+    <h2 id="popup-title">Einkaufsliste</h2>
+    <p><strong>Teilnehmer:</strong> <span id="popup-participants"></span></p>
+    <ul id="popup-products"></ul>
+
 </div>
 
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">X</span>
+        <h2>Einkaufsliste</h2>
+        <br>
+        <h3>Titel vergeben:</h3>
+        <br>
+        <input type="text" id="list-title" placeholder="Titel der Einkaufsliste">
+        <hr>
+        <h3>Teilnehmer auswählen:</h3>
+        <br>
+        <div id="participants-list"></div>
+        <hr>
+        <h3>Produkte auswählen:</h3>
+        <br>
+        <select id="tag-dropdown">
+        </select><br>
+
+
+
+        <div id="products-list"></div>  <!-- Neu: Hier erscheinen die Produkte -->
+        <br>
+
+<br>
+        <button id="confirm">Bestätigen</button>
+        <br>
+    </div>
+</div>
+<h1 id="completedListsHeader"></h1>
+<div id="completed-list-row" class="row"></div>
+
+
+<script src="animation2.js"></script>
 <script src="model.js"></script>
 <script src="view.js"></script>
 <script src="controller.js"></script>

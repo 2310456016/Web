@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Einkaufsliste</title>
-    <!--font for headings: link because better performance and faster-->
+    <!--Schrift für Überschriften: link bessere Performance und schneller -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <!--font for normal text-->
+    <!--Schrift für normalen Text-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="startpage.css">
+    <link rel="stylesheet" href="popup.css">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 <h1>Einkaufsliste</h1>
-<h2>Willkommen zu dieser Anwendung!</h2>
-<p>Mit dieser Anwendung kannst du deine Einkaufslisten erstellen, bearbeiten und mit anderen
-teilen! Das hilft dir die Übersicht über deine Einkäufe zu behalten!</p>
+
+<h2>Willkommen zu deiner persönlichen Einkaufslistenverwaltung</h2>
+<div class="start">
+    <p>Mit dieser Anwendung kannst du deine Einkaufslisten erstellen, bearbeiten und mit anderen
+        teilen! Das hilft dir die Übersicht über deine Einkäufe zu behalten und diese zu organisieren! Die unterschiedlichen
+        Buttons und Funktionen werden im Anschluss erklärt!</p>
+</div>
+
 
 <!--Animation 1-->
 <div class="overlay" id="overlay">
-    <i class="shopping-icon">🛍</i>
+    <i class="shopping-icon"><img src="icons8-shopping-cart-100.png" alt="Shopping Icon" class="shopping-icon"></i>
 </div>
 
 <button class="bwelcome" id="startButton">Start</button>

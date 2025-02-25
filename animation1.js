@@ -1,6 +1,4 @@
-// Controller-Objekt für das Handling von Events
 const OverlayController = {
-    // Referenzen zu den DOM-Elementen (View)
     overlay: document.getElementById("overlay"),
     startButton: document.getElementById("startButton"),
 
@@ -37,7 +35,7 @@ const OverlayController = {
     }
 };
 
-// Controller starten, wenn der DOM geladen ist
+// starten, wenn der DOM geladen ist
 document.addEventListener("DOMContentLoaded", function () {
     OverlayController.init();
 });
